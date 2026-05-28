@@ -1,16 +1,165 @@
-# React + Vite
+# Breathe ESG Data Ingestion Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack ESG (Environmental, Social, Governance) data ingestion and analytics platform that allows organizations to upload, validate, analyze, and audit emission records with interactive dashboards and reporting.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Frontend (Live App)**
+https://breathe-esg-data-ingestion-platform-chi.vercel.app/
 
-## React Compiler
+**Backend API**
+https://breathe-esg-backend-1nxy.onrender.com/api/records/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ESG Data Upload
+
+* Upload ESG emission CSV files
+* Support for realistic source types:
+
+  * SAP Fuel & Procurement
+  * Utility Portal Export
+  * Corporate Travel Platform
+
+### Emission Records Dashboard
+
+* View uploaded ESG emission records
+* Company-wise filtering
+* Scope filtering (Scope 1, Scope 2, Scope 3)
+* Search activity records
+
+### Analytics Dashboard
+
+* Emission distribution charts
+* Scope distribution visualization
+* Risk distribution analysis
+* Approval status analytics
+
+### Audit & Approval Workflow
+
+* Approve emission records
+* Edit emission values
+* Audit tracking for modified records
+* Suspicious activity monitoring
+* Record locking for audit compliance
+
+### Reports
+
+* Download Audit Reports
+* Download PDF Reports
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* Recharts
+* CSS
+
+### Backend
+
+* Django
+* Django REST Framework
+* Pandas
+* ReportLab
+
+### Deployment
+
+* Frontend: Vercel
+* Backend: Render
+
+---
+
+## Project Structure
+
+```text
+Breathe-ESG-Data-Ingestion-Platform/
+│
+├── frontend/      # React + Vite frontend
+├── backend/       # Django backend API
+├── README.md
+├── DECISIONS.md
+├── SOURCES.md
+└── TRADEOFFS.md
+```
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/sweetylinga/Breathe-ESG-Data-Ingestion-Platform.git
+cd Breathe-ESG-Data-Ingestion-Platform
+```
+
+### Backend Setup
+
+```bash
+cd backend
+
+pip install -r requirements.txt
+
+python manage.py migrate
+
+python manage.py runserver
+```
+
+### Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file inside `frontend/`
+
+```env
+VITE_API_URL=https://breathe-esg-backend-1nxy.onrender.com
+```
+
+---
+
+## API Endpoints
+
+```text
+/api/records/
+/api/upload/
+/api/approve/<id>/
+/api/edit/<id>/
+/api/analytics/
+/api/audit-logs/
+/api/download-audit-report/
+/api/download-pdf-report/
+```
+
+---
+
+## Key Highlights
+
+* Realistic ESG data ingestion workflow
+* Audit-ready record management
+* Interactive analytics dashboard
+* CSV upload support
+* PDF report generation
+* Public cloud deployment
+
+---
+
+## Author
+
+**Linga Srilaxmi**
+Software Engineer | Full Stack Development | AI & Data Systems
