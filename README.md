@@ -162,4 +162,4 @@ VITE_API_URL=https://breathe-esg-backend-1nxy.onrender.com
 ## Author
 
 **Linga Srilaxmi**
-Software Engineer | Full Stack Development | AI & Data Systems
+
