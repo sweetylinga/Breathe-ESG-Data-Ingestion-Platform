@@ -37,7 +37,7 @@ useState(
       const response =
   await fetch(
 
-`http://127.0.0.1:8000/api/records/?company=${companyFilter}`
+`${import.meta.env.VITE_API_URL}/api/records/?company=${companyFilter}`
 
 );
 
@@ -50,7 +50,7 @@ useState(
 const fetchAuditLogs = async () => {
   try {
     const response = await fetch(
-      "http://127.0.0.1:8000/api/audit-logs/"
+      `${import.meta.env.VITE_API_URL}/api/audit-logs/`
     );
 
     const data =
@@ -83,7 +83,7 @@ const handleUpload = async () => {
 
   try {
     const response = await fetch(
-      "http://127.0.0.1:8000/api/upload/",
+      `${import.meta.env.VITE_API_URL}/api/upload/`,
       {
         method: "POST",
         body: formData,
@@ -128,7 +128,7 @@ const handleEdit = async (id) => {
 
     const response =
       await fetch(
-        `http://127.0.0.1:8000/api/edit/${id}/`,
+        `${import.meta.env.VITE_API_URL}/api/edit/${id}/`,
         {
           method: "POST",
 
@@ -167,7 +167,7 @@ const handleDownloadAuditReport =
   () => {
 
     window.open(
-      "http://127.0.0.1:8000/api/download-audit-report/",
+      `${import.meta.env.VITE_API_URL}/api/download-audit-report/`,
       "_blank"
     );
 };
@@ -175,7 +175,7 @@ const handleDownloadAuditReport =
   const handleApprove = async (id) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/approve/${id}/`
+        `${import.meta.env.VITE_API_URL}/api/approve/${id}/`
       );
 
       if (response.ok) {
